@@ -1,5 +1,9 @@
 com/neo/repository/VisitorRepository.class
 com/neo/ComposeApplication.class
-java/com/neo/dao/User.class
+com/neo/util/UserDateAudit.class
+com/neo/dao/User.class
+com/neo/util/DateAudit.class
 com/neo/entity/Visitor.class
+com/neo/dao/RoleName.class
 com/neo/controller/VisitorController.class
+com/neo/dao/Role.class
