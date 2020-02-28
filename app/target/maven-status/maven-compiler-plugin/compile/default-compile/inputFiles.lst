@@ -1,4 +1,5 @@
 /Users/bnl/IdeaProjects/dockercompose-springboot-mysql-nginx/app/src/main/java/com/neo/ComposeApplication.java
 /Users/bnl/IdeaProjects/dockercompose-springboot-mysql-nginx/app/src/main/java/com/neo/entity/Visitor.java
 /Users/bnl/IdeaProjects/dockercompose-springboot-mysql-nginx/app/src/main/java/com/neo/repository/VisitorRepository.java
+/Users/bnl/IdeaProjects/dockercompose-springboot-mysql-nginx/app/src/main/java/com/neo/dao/User.java
 /Users/bnl/IdeaProjects/dockercompose-springboot-mysql-nginx/app/src/main/java/com/neo/controller/VisitorController.java

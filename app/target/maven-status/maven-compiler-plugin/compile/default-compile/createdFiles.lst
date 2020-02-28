@@ -1,4 +1,5 @@
 com/neo/repository/VisitorRepository.class
 com/neo/ComposeApplication.class
+java/com/neo/dao/User.class
 com/neo/entity/Visitor.class
 com/neo/controller/VisitorController.class

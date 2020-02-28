@@ -9,7 +9,8 @@ services:
    - 443:443
    volumes:
    - ./nginx/conf.d:/etc/nginx/conf.d
-    
+
+
   mysql:
    container_name: v-mysql
    image: mysql/mysql-server:5.7
@@ -20,7 +21,9 @@ services:
    ports:
    - "3306:3306"
    restart: always
-    
+
+
+
   app:
     restart: always
     build: ./app
