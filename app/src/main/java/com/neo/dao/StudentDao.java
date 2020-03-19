@@ -1,4 +1,11 @@
 package com.neo.dao;
 
-public interface Student {
+import com.neo.entity.Student;
+
+import java.util.List;
+
+public interface StudentDao {
+
+    public List<Student> findAllStudent();
+
 }

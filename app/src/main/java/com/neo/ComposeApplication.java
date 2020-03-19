@@ -8,5 +8,13 @@ public class ComposeApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ComposeApplication.class, args);
+		testMybatis();
+	}
+
+	private static void testMybatis(){
+
+		System.out.println("Mybatis test");
+
+
 	}
 }

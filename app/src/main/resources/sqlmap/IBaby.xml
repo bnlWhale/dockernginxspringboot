@@ -1,6 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace：用来区别不同的类的名字 -->
+<mapper namespace="family">
 
-</beans>
+    <!--  添加用户  -->
+    <insert id="insertBaby" parameterType="com.neo.entity.Baby">
+        <selectKey keyProperty="id" resultType="Integer" order="AFTER">
+            select LAST_INSERT_ID()
+        </selectKey>
+        insert into Baby (name,dob) values(#{name},#{dob})
+    </insert>
+    <!--  查询"01"课程比"02"课程成绩高的学生的信息及课程分数 -->
+
+
+</mapper>

@@ -1,6 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace：用来区别不同的类的名字 -->
+<mapper namespace="school">
 
-</beans>
+    <!-- 通过Id查询一个用户   -->
+    <select id="findAllTeachers"  resultType="com.neo.entity.Teacher">
+        select * from Teacher
+    </select>
+
+    <select id="findAllStudent"  resultType="com.neo.entity.Student">
+        select * from Student
+    </select>
+
+</mapper>
