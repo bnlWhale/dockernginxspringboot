@@ -14,4 +14,19 @@
         select * from Student
     </select>
 
+    <resultMap id="StudentScoreGrade" type="com.neo.entity.Student">
+
+        <id property="id" column="s_id"/>
+        <result property="name" column="s_name"/>
+        <association property="teacher" javaType="com.neo.entity.Course">
+            <id property="id" column="t_id"/>
+            <result property="name" column="t_name"/>
+        </association>
+
+    </resultMap>
+    
+    <!-- #1. 查询"01"课程比"02"课程成绩高的学生的信息及课程分数	-->
+    <select id="gradeScoreCompare" resultType="studentScoreGrade">
+
+    </select>
 </mapper>
