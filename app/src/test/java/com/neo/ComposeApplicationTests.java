@@ -66,6 +66,15 @@ public class ComposeApplicationTests {
 		}
 	}
 
+	@Test
+	public void testShowScoreStudent() throws Exception{
+		ScoreDao sDao = new ScoreImpl(factory);
+		List<Student> list = sDao.findAllScore();
+		for(Student student:list){
+			System.out.println(student);
+		}
+	}
+
 	/*
 	@Test
 	public void testInsertBaby() throws Exception{

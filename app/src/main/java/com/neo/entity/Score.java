@@ -10,5 +10,6 @@ public class Score implements Serializable {
     private String s_id;
     private String c_id;
     private int s_score;
-
+    private String nameOfCourse;
+    private String nameOfStudent;
 }

@@ -6,27 +6,23 @@
 <mapper namespace="school">
 
     <!-- 通过Id查询一个用户   -->
-    <select id="findAllTeachers"  resultType="com.neo.entity.Teacher">
+    <select id="findAllTeachers" resultType="com.neo.entity.Teacher">
         select * from Teacher
     </select>
 
-    <select id="findAllStudent"  resultType="com.neo.entity.Student">
+    <select id="findAllStudent" resultType="com.neo.entity.Student">
         select * from Student
     </select>
 
     <resultMap id="StudentScoreGrade" type="com.neo.entity.Student">
 
-        <id property="id" column="s_id"/>
-        <result property="name" column="s_name"/>
-        <association property="teacher" javaType="com.neo.entity.Course">
-            <id property="id" column="t_id"/>
-            <result property="name" column="t_name"/>
-        </association>
+        <id property="s_id" column="s_id"/>
+
 
     </resultMap>
-    
-    <!-- #1. 查询"01"课程比"02"课程成绩高的学生的信息及课程分数	-->
-    <select id="gradeScoreCompare" resultType="studentScoreGrade">
 
+    <!-- #1. 查询"01"课程比"02"课程成绩高的学生的信息及课程分数	-->
+    <select id="gradeScoreCompare" resultMap="StudentScoreGrade">
+          select * from Student st, Score sc where st.
     </select>
 </mapper>

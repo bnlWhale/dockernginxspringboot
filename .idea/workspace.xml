@@ -2,26 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81968be9-4fa3-4d3c-af24-b17a60a32c25" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/neo/dao/BabyDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/neo/dao/BabyImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/neo/dao/StudentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/neo/dao/StudentImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/neo/dao/TeacherDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/neo/dao/TeacherImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/neo/entity/Baby.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/neo/entity/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/neo/entity/Teacher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/neo/util/ids/SnowflakeIdWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/SqlMapConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/sqlmap/IBaby.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/sqlmap/ITeacherDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/neo/dao/ScoreDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/neo/dao/ScoreImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/neo/ComposeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/neo/ComposeApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/neo/entity/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/neo/entity/Score.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/neo/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/neo/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/sqlmap/ITeacherDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/sqlmap/ITeacherDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/com/neo/ComposeApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/neo/ComposeApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/target/classes/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/target/classes/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/target/classes/com/neo/ComposeApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/target/classes/com/neo/ComposeApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/target/test-classes/com/neo/ComposeApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/target/test-classes/com/neo/ComposeApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +69,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.ComposeApplicationTests.testFindUserByUserName">
+  <component name="RunManager" selected="JUnit.ComposeApplicationTests.testShowScoreStudent">
     <configuration name="ComposeApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dockercompose-springboot-mysql-nginx" />
       <extension name="coverage">
@@ -130,6 +117,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ComposeApplicationTests.testShowScoreStudent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dockercompose-springboot-mysql-nginx" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.neo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.neo" />
+      <option name="MAIN_CLASS_NAME" value="com.neo.ComposeApplicationTests" />
+      <option name="METHOD_NAME" value="testShowScoreStudent" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DockerComposeTest" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="dockercompose-springboot-mysql-nginx" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.neo.ComposeApplication" />
@@ -140,6 +143,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ComposeApplicationTests.testShowScoreStudent" />
         <item itemvalue="JUnit.ComposeApplicationTests.testFindUserByUserName" />
         <item itemvalue="JUnit.ComposeApplicationTests.testShowAllStudent" />
         <item itemvalue="JUnit.ComposeApplicationTests" />
@@ -168,7 +172,7 @@
       <workItem from="1582872539753" duration="45000" />
       <workItem from="1582872904646" duration="15468000" />
       <workItem from="1583463560523" duration="983000" />
-      <workItem from="1584080194150" duration="5066000" />
+      <workItem from="1584080194150" duration="13437000" />
     </task>
     <servers />
   </component>
@@ -180,30 +184,30 @@
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="980" y="363" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1583308062692" />
-    <state width="2353" height="270" key="GridCell.Tab.0.bottom" timestamp="1584620635568">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state width="2353" height="270" key="GridCell.Tab.0.bottom" timestamp="1584904109208">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
-    <state width="2353" height="270" key="GridCell.Tab.0.bottom/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1583312760755" />
+    <state width="2353" height="270" key="GridCell.Tab.0.bottom/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1584904109208" />
     <state width="1358" height="334" key="GridCell.Tab.0.bottom/0.23.2560.1337@0.23.2560.1337" timestamp="1581717842215" />
-    <state width="2353" height="270" key="GridCell.Tab.0.bottom/0.23.2560.1417/-1920.23.1920.1057@0.23.2560.1417" timestamp="1584620635568" />
-    <state width="2353" height="270" key="GridCell.Tab.0.center" timestamp="1584620635567">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state width="2353" height="270" key="GridCell.Tab.0.bottom/0.23.2560.1417/-1920.23.1920.1057@0.23.2560.1417" timestamp="1584690692080" />
+    <state width="2353" height="270" key="GridCell.Tab.0.center" timestamp="1584904109208">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
-    <state width="2353" height="270" key="GridCell.Tab.0.center/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1583312760754" />
+    <state width="2353" height="270" key="GridCell.Tab.0.center/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1584904109208" />
     <state width="1358" height="334" key="GridCell.Tab.0.center/0.23.2560.1337@0.23.2560.1337" timestamp="1581717842215" />
-    <state width="2353" height="270" key="GridCell.Tab.0.center/0.23.2560.1417/-1920.23.1920.1057@0.23.2560.1417" timestamp="1584620635567" />
-    <state width="2353" height="270" key="GridCell.Tab.0.left" timestamp="1584620635566">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state width="2353" height="270" key="GridCell.Tab.0.center/0.23.2560.1417/-1920.23.1920.1057@0.23.2560.1417" timestamp="1584690692079" />
+    <state width="2353" height="270" key="GridCell.Tab.0.left" timestamp="1584904109207">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
-    <state width="2353" height="270" key="GridCell.Tab.0.left/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1583312760754" />
+    <state width="2353" height="270" key="GridCell.Tab.0.left/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1584904109207" />
     <state width="1358" height="334" key="GridCell.Tab.0.left/0.23.2560.1337@0.23.2560.1337" timestamp="1581717842215" />
-    <state width="2353" height="270" key="GridCell.Tab.0.left/0.23.2560.1417/-1920.23.1920.1057@0.23.2560.1417" timestamp="1584620635566" />
-    <state width="2353" height="270" key="GridCell.Tab.0.right" timestamp="1584620635567">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state width="2353" height="270" key="GridCell.Tab.0.left/0.23.2560.1417/-1920.23.1920.1057@0.23.2560.1417" timestamp="1584690692079" />
+    <state width="2353" height="270" key="GridCell.Tab.0.right" timestamp="1584904109208">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
-    <state width="2353" height="270" key="GridCell.Tab.0.right/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1583312760755" />
+    <state width="2353" height="270" key="GridCell.Tab.0.right/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1584904109208" />
     <state width="1358" height="334" key="GridCell.Tab.0.right/0.23.2560.1337@0.23.2560.1337" timestamp="1581717842215" />
-    <state width="2353" height="270" key="GridCell.Tab.0.right/0.23.2560.1417/-1920.23.1920.1057@0.23.2560.1417" timestamp="1584620635567" />
+    <state width="2353" height="270" key="GridCell.Tab.0.right/0.23.2560.1417/-1920.23.1920.1057@0.23.2560.1417" timestamp="1584690692080" />
     <state width="2353" height="270" key="GridCell.Tab.1.bottom" timestamp="1583275410370">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
@@ -244,10 +248,10 @@
     </state>
     <state width="2353" height="334" key="GridCell.Tab.2.right/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1583275360127" />
     <state width="1358" height="334" key="GridCell.Tab.2.right/0.23.2560.1337@0.23.2560.1337" timestamp="1581717842216" />
-    <state x="1206" y="586" key="com.intellij.ide.util.TipDialog" timestamp="1584080196397">
+    <state x="1206" y="586" key="com.intellij.ide.util.TipDialog" timestamp="1584911280914">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
-    <state x="1206" y="586" key="com.intellij.ide.util.TipDialog/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1584080196397" />
+    <state x="1206" y="586" key="com.intellij.ide.util.TipDialog/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1584911280914" />
     <state x="1206" y="586" key="com.intellij.ide.util.TipDialog/0.23.2560.1337@0.23.2560.1337" timestamp="1582851001340" />
   </component>
   <component name="masterDetails">
