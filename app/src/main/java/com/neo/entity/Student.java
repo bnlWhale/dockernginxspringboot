@@ -14,6 +14,6 @@ public class Student implements Serializable {
     private String s_sex;
     private String s_birth;
     private List<Score> listOfScore;
-    private List<Course> listOfCourse;
+    //private List<Course> listOfCourse;
 
 }

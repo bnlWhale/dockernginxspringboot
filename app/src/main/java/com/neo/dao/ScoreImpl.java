@@ -17,9 +17,14 @@ public class ScoreImpl implements ScoreDao {
 
     @Override
     public List<Student> findAllScore() {
+
+        return null;
+        /*
         SqlSession sqlSession = sqlSessionFactory.openSession();
         List<Student> allStudent = sqlSession.selectList("school.gradeScoreCompare");
         sqlSession.close();
         return allStudent;
+
+         */
     }
 }

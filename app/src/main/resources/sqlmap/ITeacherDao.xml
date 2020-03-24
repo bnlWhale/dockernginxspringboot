@@ -5,24 +5,29 @@
 <!--namespace：用来区别不同的类的名字 -->
 <mapper namespace="school">
 
+    <resultMap id="StudentComplex" type="com.neo.entity.Student">
+        <result property="s_id" column="s_id"/>
+        <result property="s_name" column="s_name"/>
+        <result property="s_sex" column="s_sex"/>
+        <result property="s_birth" column="s_birth"/>
+        <collection property="listOfScore" ofType="com.neo.entity.Score" column="s_id">
+            <id property="s_id" column="s_id" javaType="String" jdbcType="VARCHAR"/>
+            <id property="c_id" column="c_id" javaType="String" jdbcType="VARCHAR"/>
+            <result property="s_score" column="s_score" javaType="int" jdbcType="INTEGER"/>
+        </collection>
+
+    </resultMap>
+    
+    
     <!-- 通过Id查询一个用户   -->
     <select id="findAllTeachers" resultType="com.neo.entity.Teacher">
         select * from Teacher
     </select>
-
-    <select id="findAllStudent" resultType="com.neo.entity.Student">
-        select * from Student
+    
+    <select id="findAllStudent" resultMap="StudentComplex">
+        select st.*, sc.* from Student st left join Score sc on st.s_id = sc.s_id;
     </select>
-
-    <resultMap id="StudentScoreGrade" type="com.neo.entity.Student">
-
-        <id property="s_id" column="s_id"/>
-
-
-    </resultMap>
-
+    
     <!-- #1. 查询"01"课程比"02"课程成绩高的学生的信息及课程分数	-->
-    <select id="gradeScoreCompare" resultMap="StudentScoreGrade">
-          select * from Student st, Score sc where st.
-    </select>
+
 </mapper>
