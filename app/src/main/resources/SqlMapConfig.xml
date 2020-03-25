@@ -23,7 +23,7 @@
 
     <!--指定映射配置文件的位置，映射配置文件指的是每个dao独立的配置文件-->
     <mappers>
-        <mapper resource="sqlmap/ITeacherDao.xml"/>
+        <mapper resource="sqlmap/SchoolOperation.xml"/>
         <mapper resource="sqlmap/IBaby.xml"/>
     </mappers>
 </configuration>

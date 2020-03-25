@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace：用来区别不同的类的名字 -->
+<mapper namespace="school">
+
+    <resultMap id="StudentComplex" type="com.neo.entity.Student">
+        <result property="s_id" column="s_id"/>
+        <result property="s_name" column="s_name"/>
+        <result property="s_sex" column="s_sex"/>
+        <result property="s_birth" column="s_birth"/>
+        <collection property="listOfScore" ofType="com.neo.entity.Score" column="s_id">
+            <id property="s_id" column="s_id" javaType="String" jdbcType="VARCHAR"/>
+            <id property="c_id" column="c_id" javaType="String" jdbcType="VARCHAR"/>
+            <result property="s_score" column="s_score" javaType="int" jdbcType="INTEGER"/>
+        </collection>
+        <collection property="listOfCourse" ofType="com.neo.entity.Course">
+            <id property="c_id" column="c_id" javaType="String" jdbcType="VARCHAR"/>
+            <result property="c_name" column="c_name" javaType="String" jdbcType="VARCHAR"/>
+            <result property="t_id" column="t_id" javaType="String" jdbcType="VARCHAR"/>
+        </collection>
+    </resultMap>
+    
+    
+    <!-- 通过Id查询一个用户   -->
+    <select id="findAllTeachers" resultType="com.neo.entity.Teacher">
+        select * from Teacher
+    </select>
+
+    <!-- #0. 显示所有学生的成绩及课程 -->
+    <select id="findAllStudent" resultMap="StudentComplex">
+        select st.*, sc.*, co.* from Student st left join Score sc on st.s_id = sc.s_id left join Course co on sc.c_id = co.c_id;
+    </select>
+    
+    <!-- #1. 查询"01"课程比"02"课程成绩高的学生的信息及课程分数	-->
+    <select id="findStudentSc1Sc2" resultType="com.neo.entity.Student">
+        select sc1.* , co.`c_name` , st.`s_name` from Score sc1, Score sc2, Course co, Student st
+        where sc1.`s_id` = sc2.`s_id` and sc1.`c_id`='01' and sc2.`c_id`='02' and sc1.`s_score` > sc2.`s_score` and sc1.`c_id` = co.`c_id` and sc1.s_id = st.s_id;
+    </select>
+
+    <!-- #2. 查询平均成绩大于等于60分的同学的学生编号和学生姓名和平均成绩 -->
+    <select id="findStudentAvg60" resultType="com.neo.entity.Student">
+         select sc.s_id, AVG(sc.`s_score`) as totalScore, st.s_name from Student st, Score sc where st.s_id = sc.s_id group by sc.s_id having totalScore > 60;
+    </select>
+
+    <!-- #3. 查询所有同学的学生编号、学生姓名、选课总数、所有课程的总成绩 -->
+    <select id="findStuBasicStatus" resultType="com.neo.entity.Student">
+        select st.s_name, sum(sc.`s_score`), count(sc.`c_id`) from Student st left join Score sc on st.s_id = sc.s_id group by st.s_id;
+    </select>
+
+    <!-- #4.  查询"李"姓老师的数量 -->
+    <select id="findTeacherLi" resultType="com.neo.entity.Teacher">
+        select * from Teacher where t_name like '李%';
+    </select>
+
+    <!-- #5. 查询学过"张三"老师授课的同学的信息 -->
+   <select id="findStuByTeacher" resultType="com.neo.entity.Student">
+       select * from Score sc where sc.`c_id` in (select co.`c_id` from Course co where co.`t_id` IN (select te.`t_id` from Teacher te where te.`t_name` = '张三'));
+   </select>
+
+
+</mapper>
